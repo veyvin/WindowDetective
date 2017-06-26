@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\veyvin\Desktop\WindowDetective.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1932452-3FC9-4574-B4A8-6D582DDE820E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>WindowDetective</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VirtualDeviceLib\WindowDetective.cs" />
+    <Compile Include="VirtualDeviceLib\Scene.cs" />
+    <Compile Include="VirtualDeviceLib\GameRole.cs" />
+    <Compile Include="VirtualDeviceLib\EnumSceneName.cs" />
+    <Compile Include="VirtualDeviceLib\Hand.cs" />
+    <Compile Include="VirtualDeviceLib\VirtualDeviceAction.cs" />
+    <Compile Include="VirtualDeviceLib\DelayAction.cs" />
+    <Compile Include="VirtualDeviceLib\Eye.cs" />
+    <Compile Include="VirtualDeviceLib\MagicPen.cs" />
+    <Compile Include="VirtualDeviceLib\EnumSaveType.cs" />
+    <Compile Include="VirtualDeviceLib\ExpandedName.cs" />
+    <Compile Include="VirtualDeviceLib\EnumVirtualDeviceActionType.cs" />
+    <Compile Include="VirtualDeviceLib\Mouse.cs" />
+    <Compile Include="VirtualDeviceLib\WindowsAPI.cs" />
+    <Compile Include="VirtualDeviceLib\VirtualDeviceLibException.cs" />
+    <Compile Include="VirtualDeviceLib\MouseAction.cs" />
+    <Compile Include="VirtualDeviceLib\KeyboardAction.cs" />
+    <Compile Include="VirtualDeviceLib\Keyboard.cs" />
+    <Compile Include="VirtualDeviceLib\EnumKeyboardKey.cs" />
+    <Compile Include="WindowDetective\FormDetective.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowDetective\Program.cs" />
+    <Compile Include="WindowDetective\Properties\Settings.cs" />
+    <Compile Include="WindowDetective\Properties\Resources.cs" />
+    <Compile Include="InputDeviceLib\WaitDeclaration.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WindowDetective\FormDetective.resx" />
+    <EmbeddedResource Include="WindowDetective\Properties\Resources.resx" />
+    <EmbeddedResource Include="WindowDetective\VirtualDeviceLib.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
